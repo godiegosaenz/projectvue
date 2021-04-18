@@ -12,6 +12,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::prefix('admin')->group(function () {
+    Route::get('/login', function () {
+        echo "funciona";
+    });
+});
 
 Route::get('/', function () {
     return view('welcome');
